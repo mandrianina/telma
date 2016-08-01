@@ -1,0 +1,4 @@
+telma_dashboard:
+    resource: "@TelmaDashboardBundle/Resources/config/routing.yml"
+    prefix:   /dashboard
+

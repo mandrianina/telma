@@ -1,0 +1,36 @@
+
+{% extends "TelmaDashboardBundle::layout.html.twig" %}
+
+{% set  page = "index" %}
+
+{% block title %}
+Overview - {{ parent() }}
+{% endblock %}
+
+{% block telmadashboard_header %}
+{{ parent() }} - Overview
+{% endblock %}
+
+{% block telmadashboard_body %}
+	<table class="table table-bordered table-striped table-responsive">
+			<thead>
+				<tr>
+				{% for nomOffre in listOffre %}
+					<th>{{ nomOffre|upper }}</th>
+				{% endfor %}
+				</tr>
+			</thead>
+
+			<tbody>
+
+				{% for offre in valeurOffre %}
+				<tr>
+					<td>{{ offre.getNomOffre }}</td>
+					<td>{{ offre.getDebitAct }}</td>
+					<td>{{ offre.getDebitMin }}</td>
+					<td>{{ offre.getDebitMax }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+	</table>
+{% endblock %}

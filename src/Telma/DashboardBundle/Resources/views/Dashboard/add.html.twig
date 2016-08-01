@@ -1,0 +1,16 @@
+{% extends "TelmaDashboardBundle::layout.html.twig" %}
+
+{% block title %}
+ 	Add offers - {{ parent ()}}
+{% endblock %}
+
+{% block telmadashboard_body %}
+
+<h2> Add offers </h2>
+
+{{ include("TelmaDashboardBundle:Dashboard:form.html.twig") }}
+
+<p>
+<a href="{{ path('telma_dashboard_homepage') }}"><i class="glyphicon glyphicon-chevron-left"></i>Back to overview</a>
+</p>
+{% endblock %}

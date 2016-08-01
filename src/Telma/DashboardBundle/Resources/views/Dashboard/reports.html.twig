@@ -1,0 +1,35 @@
+
+
+{% extends "TelmaDashboardBundle::layout.html.twig" %}
+
+{% set page = "reports" %}
+
+{% block title %}
+Reports - {{ parent() }}
+{% endblock %}
+
+{% block telmadashboard_header %}
+{{ parent() }} - Reports
+{% endblock %}
+
+{% block telmadashboard_body %}
+<div id="chart">
+  <p>Variations on Greeting the World</p>
+
+
+
+
+  <canvas id="canvas" width="600" height="400">
+    No Love for HTML5 eh?
+  </canvas>
+  <p>Change the 'myData' values to see the labels dynamically adjust.</p>
+</div>
+
+{% block telmadashboard_reports_chart %}
+
+{% endblock %}
+
+<input type="hidden" id="entete" value="{% for head,data in datas %}{{ head }} {% endfor %}"></input>
+
+  <input type="hidden" id="datas" value="{% for data in datas %}{{ data }} {% endfor %}"></input>
+{% endblock %}

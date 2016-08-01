@@ -1,0 +1,19 @@
+telma_dashboard_homepage:
+    path:     /
+    defaults:
+     _controller: TelmaDashboardBundle:Main:index
+
+telma_dashboard_add:
+    path:     /add
+    defaults:
+      _controller: TelmaDashboardBundle:Main:add
+      
+telma_dashboard_reports:
+    path:     /reports
+    defaults:
+      _controller: TelmaDashboardBundle:Main:reports
+
+telma_dashboard_policy:
+    path:     /policy 
+    defaults:
+      _controller: TelmaDashboardBundle:Main:policy
